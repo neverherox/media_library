@@ -9,13 +9,20 @@ namespace task0_MediaLibrary
     {
         static void Main(string[] args)
         {
-            MediaLibrary mediaLibrary = new MediaLibrary();
-            PlayList playList = new PlayList();
-            playList.Add(new Video());
-            playList.Add(new Audio());
-            mediaLibrary.AddMediaFile(new Video());
-            mediaLibrary.AddPlayList(playList);
-            mediaLibrary.PlayAllPlayLists();
+            MediaLibrary library = new MediaLibrary();
+            IPlayList<Video> videoPlayList = new PlayList();
+            IPlayList<Image> imagePlayList = new PlayList();
+            IPlayList<Audio> audioPlayList = new PlayList();
+
+            videoPlayList.Add(new Video());
+            imagePlayList.Add(new Image());
+            audioPlayList.Add(new Audio());
+
+            library.AddPlayList((PlayList)audioPlayList);
+            library.AddPlayList((PlayList)videoPlayList);
+            library.AddPlayList((PlayList)imagePlayList);
+
+            library.PlayAllPlayLists();
             Console.ReadKey();
         }
     }

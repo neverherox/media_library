@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PlayList\IPlayList.cs" />
     <Compile Include="MediaFiles\Audio.cs" />
     <Compile Include="MediaFiles\MediaType.cs" />
     <Compile Include="MediaFiles\Image.cs" />

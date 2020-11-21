@@ -3,7 +3,7 @@ using task0_MediaLibrary.MediaFiles;
 
 namespace task0_MediaLibrary.PlayLists
 {
-    public class PlayList
+    public class PlayList : IPlayList<MediaFile>
     {
         private List<MediaFile> mediaFiles;
 
